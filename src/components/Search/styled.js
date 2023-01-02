@@ -2,6 +2,12 @@ import styled from "styled-components";
 
 export const StyledSearch = styled.div`
     display: flex;
+    max-width: 480px;
+    width: 100%;
+
+    @media (max-width: 500px){
+      padding: 0 4%;
+    }
 
 
     input[type = "search"]{
@@ -10,7 +16,7 @@ export const StyledSearch = styled.div`
       border-radius: 14px 0px 0px 14px;
       outline: none;
       border: none;
-      min-width: 480px;
+      width: 100%;
       font-family: 'Rubik';
       font-weight: 400;
       cursor: pointer;

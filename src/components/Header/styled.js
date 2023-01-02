@@ -12,6 +12,10 @@ export const StyledHeader = styled.header`
     height: 274px;
     padding: 28px 0;
     gap: 28px;
+
+    @media (max-width: 500px){
+        height: 334px;
+    }
 `;
 
 export const StyledTitle = styled.h1`

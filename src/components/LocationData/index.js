@@ -17,12 +17,13 @@ const LocationData = (props) => {
     <Container>
       <StyledInfo>
         <h5>IP ADDRESS</h5>
-        <h1>{data.ip ? data.ip : ""}</h1>
+        <h1>{data.ip ? data.ip : ""} 192.212.174.101</h1>
       </StyledInfo>
       <StyledLine/>
       <StyledInfo>
         <h5>LOCATION</h5>
         <h1>
+          Brooklyn, NY 10001
         {/* {data.location["region"] ? data.location["region"] + ',' : ''}  {data.location["country"] ? data.location["country"] : ''} {data.as["asn"] ? data.as["asn"] : ''} */}
         </h1>
       </StyledInfo>
@@ -30,6 +31,7 @@ const LocationData = (props) => {
       <StyledInfo>
         <h5>TIMEZONE</h5>
         <h1>
+          UTC -05:00
         {/* {data.location["timezone"] ? 'UTC -' + data.location["timezone"] : ''} */}
         </h1>
       </StyledInfo>
@@ -37,6 +39,7 @@ const LocationData = (props) => {
       <StyledInfo>
         <h5>ISP</h5>
         <h1>
+          SpaceX Starlink
         {/* {data.isp ? data.isp : ''} */}
         </h1>
       </StyledInfo>
