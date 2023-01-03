@@ -25,7 +25,7 @@ export const StyledInfo = styled.div`
 
   @media (max-width: 500px){
     flex-direction: column;
-    padding: 16px 0;
+    padding: 18px 0;
     width: 330px;
     justify-content: center;
     align-items: center;
