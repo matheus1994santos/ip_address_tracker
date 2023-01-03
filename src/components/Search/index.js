@@ -2,19 +2,19 @@ import React from 'react'
 
 import arrow from '../../images/icon-arrow.svg'
 
-import { StyledSearch } from './styled'
+import { StyledSearch } from './styles'
 
-const Search = ({stateValue, getValue, postValue}) => {
+const Search = ({stateValue, onGetValue, onSearch}) => {
 
   return (
     <StyledSearch>
       <input 
         type="search" 
         value={stateValue} 
-        onChange={getValue}
+        onChange={onGetValue}
         placeholder="Search for any IP address or domain"
       />
-      <button onClick={postValue}>
+      <button onClick={onSearch}>
         <img 
           src={arrow} 
           alt="Arrow"

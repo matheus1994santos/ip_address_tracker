@@ -49,6 +49,7 @@ export const StyledInfo = styled.div`
   }
 
   h1{
+    font-size: 28px;
     font-weight: 500;
   }
 `;

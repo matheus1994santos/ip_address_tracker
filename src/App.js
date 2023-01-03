@@ -1,10 +1,10 @@
 import React from "react";
-import Page from "./components/Page";
+import HomePage from "./containers/HomePage";
 
 
 function App() {
   return (
-    <Page/>
+    <HomePage/>
   );
 }
 

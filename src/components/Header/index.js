@@ -1,11 +1,10 @@
 import React from 'react'
-import { StyledHeader, StyledTitle } from './styled'
+import { StyledHeader, StyledTitle } from './styles'
 
-const Header = (props) => {
+const Header = ({title = '', ...otherProps}) => {
   return (
-    <StyledHeader>
-       <StyledTitle>{props.titles}</StyledTitle>
-      {props.children}
+    <StyledHeader {...otherProps}>
+       <StyledTitle>{title}</StyledTitle>
     </StyledHeader>
   )
 }
