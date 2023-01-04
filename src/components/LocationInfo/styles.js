@@ -9,6 +9,10 @@ export const Container = styled.section`
   border-radius: 16px;
   z-index: 1;
 
+  @media (max-width: 780px){
+    max-width: 700px;
+  }
+
   @media (max-width: 500px){
     flex-direction: column;
   }
@@ -24,14 +28,27 @@ export const StyledInfo = styled.div`
   min-height: 160px;
   padding: 34px 28px 22px 32px;
 
+  @media (max-width: 780px){
+    width: 700px;
+    padding: 18px 16px;
+
+    h5{
+      font-size: 11px;
+    }
+
+    h1{
+      font-size: 22px;
+    }
+  }
+
   @media (max-width: 500px){
     flex-direction: column;
-    padding: 18px 0;
-    width: 330px;
+    padding: 0;
+    width: 360px;
     justify-content: center;
     align-items: center;
-    height: auto;
-    gap: 8px;
+    min-height: 90px;
+    gap: 0px;
 
     h5{
       font-size: 11px;
