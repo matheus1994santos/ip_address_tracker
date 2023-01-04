@@ -1,33 +1,35 @@
 import React from 'react'
 import { Container, StyledInfo, StyledLine } from './styles'
 
-const LocationInfo = ({info, ...otherPros}) => {
+const LocationInfo = ({ info = {}, ...otherPros}) => {
+  const location = info.location || {};
+  const as = info.as || {};
 
   return (
     <Container {...otherPros}>
       <StyledInfo>
         <h5>IP ADDRESS</h5>
-        <h1> 192.212.174.101</h1>
+        <h1>{info.ip ? info.ip : ''}</h1>
       </StyledInfo>
       <StyledLine/>
       <StyledInfo>
         <h5>LOCATION</h5>
         <h1>
-          Brooklyn, NY 10001
+          {location.region ? info.location?.region :''}, {location.country ? location.country : ''} {as.asn ? as.asn : ''}
         </h1>
       </StyledInfo>
       <StyledLine/>
       <StyledInfo>
         <h5>TIMEZONE</h5>
         <h1>
-          UTC -05:00
+          UTC {location.timezone ? location.timezone : ''}
         </h1>
       </StyledInfo>
       <StyledLine/>
       <StyledInfo>
         <h5>ISP</h5>
         <h1>
-          SpaceX Starlink
+          {info.isp ? info.isp : ''}
         </h1>
       </StyledInfo>
     </Container>

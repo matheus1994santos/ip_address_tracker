@@ -7,6 +7,7 @@ export const Container = styled.section`
   align-items: center;
   background-color: #fff;
   border-radius: 16px;
+  z-index: 1;
 
   @media (max-width: 500px){
     flex-direction: column;
@@ -20,7 +21,7 @@ export const StyledInfo = styled.div`
   flex-wrap: nowrap;
   gap: 15px;
   width: 272px;
-  height: 160px;
+  min-height: 160px;
   padding: 34px 28px 22px 32px;
 
   @media (max-width: 500px){
