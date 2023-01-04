@@ -3,7 +3,6 @@ import React from 'react'
 import Header from '../../components/Header'
 import LocationInfo from '../../components/LocationInfo'
 import Map from '../../components/Map'
-
 import Search from '../../components/Search'
 import TrackerOverView from '../../components/TrackerOverView'
 

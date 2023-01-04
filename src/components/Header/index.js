@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { StyledHeader, StyledTitle } from './styles'
 
 const Header = ({title = '', ...otherProps}) => {

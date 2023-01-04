@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { Container, StyledInfo, StyledLine } from './styles'
 
 const LocationInfo = ({ info = {}, ...otherPros}) => {
