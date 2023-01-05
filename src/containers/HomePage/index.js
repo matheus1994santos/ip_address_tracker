@@ -11,7 +11,7 @@ import { Container } from './styles'
 const Page = () => {
   const [ value, setValue ] = React.useState('');
   const [ locationInfo, setLocationInfo ] = React.useState({});
-  const [ resquesting, setResquesting ] = React.useState(false)
+  const [ resquesting, setResquesting ] = React.useState(false);
   const locationTracker = locationInfo.location || {};
 
   function getValue({target}){

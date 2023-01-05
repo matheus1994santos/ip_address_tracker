@@ -12,21 +12,18 @@ const LocationInfo = ({ info = {}, ...otherPros}) => {
         <h5>IP ADDRESS</h5>
         <h1>{info.ip ? info.ip : ''}</h1>
       </StyledInfo>
-      { window.screen.width > 790 ? <StyledLine/> : null}
       <StyledInfo>
         <h5>LOCATION</h5>
         <h1>
-          {location.region ? info.location?.region :''}, {location.country ? location.country : ''} {as.asn ? as.asn : ''}
+          {location.region ? info.location?.region + ',' :''} {location.country ? location.country : ''} {as.asn ? as.asn : ''}
         </h1>
       </StyledInfo>
-      { window.screen.width > 790 ? <StyledLine/> : null}
       <StyledInfo>
         <h5>TIMEZONE</h5>
         <h1>
-          UTC {location.timezone ? location.timezone : ''}
+          {location.timezone ?  'UTC ' + location.timezone : ''}
         </h1>
       </StyledInfo>
-      { window.screen.width > 790 ? <StyledLine/> : null}
       <StyledInfo>
         <h5>ISP</h5>
         <h1>
