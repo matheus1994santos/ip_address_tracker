@@ -10,24 +10,31 @@ import { Container } from './styles'
 
 const Page = () => {
   const [ value, setValue ] = React.useState('');
+  const [ prevValue, setPrevValue ] = React.useState('')
   const [ locationInfo, setLocationInfo ] = React.useState({});
   const [ resquesting, setResquesting ] = React.useState(false);
   const locationTracker = locationInfo.location || {};
 
-  function getValue({target}){
+  function onValue({target}){
     setValue(target.value)
   }
 
   React.useEffect(() => {
-    if(resquesting){
+    if(resquesting ){
       fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_tJ7KPlm2u9yCqC6eCwGlhqBZ2ImX9&ipAddress=${value}`)
       .then( json => json.json() )
       .then( dados => {
         setLocationInfo(dados)
         setResquesting(false)
+        setPrevValue(value)
       } )
     }
   }, [resquesting, value])
+  
+  function handleRequesting(){
+    if(value === prevValue) return;
+    setResquesting(true)
+  }
 
   return (
     <Container>
@@ -35,8 +42,8 @@ const Page = () => {
         <Header title={'IP Address Tracker'}/>
         <Search 
           stateValue={value} 
-          onGetValue={getValue} 
-          onSearch={()=> setResquesting(true)}
+          onValue={onValue} 
+          onSearch={handleRequesting}
         />
         <LocationInfo info={locationInfo} />
       </TrackerOverView>
